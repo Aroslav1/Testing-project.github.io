@@ -557,8 +557,8 @@
                 </ul>
                 <div class="user-section">
                     <div id="auth-buttons" class="auth-buttons">
-                        <button class="btn btn-outline" onclick="openModal('login-modal')">Вход</button>
-                        <button class="btn" onclick="openModal('register-modal')">Регистрация</button>
+                        <button class="btn btn-outline" id="login-btn">Вход</button>
+                        <button class="btn" id="register-btn">Регистрация</button>
                     </div>
                     <div id="user-profile" class="user-profile" style="display: none;">
                         <div class="user-avatar">
@@ -569,7 +569,7 @@
                             <a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Личный кабинет</a>
                             <a href="#"><i class="fas fa-calendar-alt"></i> Мои записи</a>
                             <a href="#"><i class="fas fa-cog"></i> Настройки</a>
-                            <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Выход</a>
+                            <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Выход</a>
                         </div>
                     </div>
                 </div>
@@ -864,6 +864,20 @@
         document.addEventListener('DOMContentLoaded', function() {
             checkAuthStatus();
             
+            // Назначение обработчиков кнопкам
+            document.getElementById('login-btn').addEventListener('click', function() {
+                openModal('login-modal');
+            });
+            
+            document.getElementById('register-btn').addEventListener('click', function() {
+                openModal('register-modal');
+            });
+            
+            document.getElementById('logout-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                logout();
+            });
+            
             // Обработчики форм
             document.getElementById('login-form').addEventListener('submit', handleLogin);
             document.getElementById('register-form').addEventListener('submit', handleRegister);
@@ -996,19 +1010,4 @@
             // Сохранение записи (в реальном приложении здесь был бы запрос к серверу)
             const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
             appointments.push({
-                userId: currentUser.email,
-                name, email, phone, age, date, problem,
-                status: 'pending'
-            });
-            localStorage.setItem('appointments', JSON.stringify(appointments));
-            
-            document.getElementById('appointment-form').reset();
-            alert('Заявка отправлена! Мы свяжемся с вами для подтверждения записи.');
-        }
-
-        // Обработка записи из личного кабинета
-        function handleDashboardAppointment(e) {
-            e.preventDefault();
-            
-            const date = document.getElementById('dashboard-date').value;
-            const
+                userId: currentUser.email
