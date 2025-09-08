@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Профессиональный логопед | Помощь детям и взрослым</title>
+    <title>Логопед "Речь легко" - профессиональная помощь по коррекции речи</title>
     <style>
-        /* Общие стили */
         * {
             margin: 0;
             padding: 0;
@@ -14,9 +13,9 @@
         }
         
         body {
+            background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
-            background-color: #f9f9f9;
         }
         
         .container {
@@ -25,112 +24,144 @@
             margin: 0 auto;
         }
         
-        /* Шапка сайта */
         header {
-            background: linear-gradient(135deg, #4fc3f7 0%, #0288d1 100%);
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
-            padding: 1rem 0;
+            padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
-        .header-content {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 24px;
             font-weight: bold;
         }
         
-        .logo span {
-            color: #ffeb3b;
-        }
-        
-        nav ul {
+        .nav-links {
             display: flex;
             list-style: none;
         }
         
-        nav ul li {
-            margin-left: 1.5rem;
+        .nav-links li {
+            margin-left: 25px;
         }
         
-        nav ul li a {
+        .nav-links a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
             transition: all 0.3s ease;
         }
         
-        nav ul li a:hover {
-            color: #ffeb3b;
+        .nav-links a:hover {
+            color: #ffd700;
         }
         
-        /* Герой секция */
         .hero {
-            padding: 4rem 0;
+            padding: 80px 0;
             text-align: center;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23e3f2fd"/><path d="M0,0 L100,100" stroke="%23bbdefb" stroke-width="2"/></svg>');
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%236a11cb" opacity="0.1"/><path d="M0 0L100 100" stroke="%232575fc" stroke-width="2" opacity="0.2"/></svg>');
         }
         
         .hero h1 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #0288d1;
+            margin-bottom: 20px;
+            color: #2575fc;
         }
         
         .hero p {
             font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
             color: #555;
         }
         
         .btn {
             display: inline-block;
-            background: #0288d1;
+            background: #2575fc;
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 12px 30px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
         
         .btn:hover {
-            background: #01579b;
+            background: #6a11cb;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
-        /* Услуги */
-        .services {
-            padding: 4rem 0;
-            background: white;
+        section {
+            padding: 60px 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
-            color: #0288d1;
-            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2575fc;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #6a11cb;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .services {
+            background-color: #f0f8ff;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
         
         .service-card {
-            background: #e3f2fd;
+            background: white;
+            padding: 30px;
             border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
         
         .service-card:hover {
@@ -138,324 +169,380 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
         
-        .service-icon {
-            font-size: 3rem;
-            color: #0288d1;
-            margin-bottom: 1rem;
-        }
-        
         .service-card h3 {
-            margin-bottom: 1rem;
-            color: #0288d1;
+            color: #2575fc;
+            margin-bottom: 15px;
         }
         
-        /* О специалисте */
-        .about {
-            padding: 4rem 0;
-            background: #f5f5f5;
+        .reviews-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-image {
-            flex: 1;
-            height: 300px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-        
-        /* Отзывы */
-        .testimonials {
-            padding: 4rem 0;
+        .review {
             background: white;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .testimonial {
-            background: #e3f2fd;
-            padding: 2rem;
+            padding: 30px;
             border-radius: 10px;
+            margin-bottom: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1rem;
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
         }
         
-        .testimonial-author {
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            background: #ddd;
+            border-radius: 50%;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
-            color: #0288d1;
+            color: #2575fc;
+            font-size: 1.5rem;
         }
         
-        /* Контакты */
-        .contact {
-            padding: 4rem 0;
-            background: #f5f5f5;
+        .review-name {
+            font-weight: bold;
+            font-size: 1.1rem;
         }
         
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .contact-info {
-            background: #e3f2fd;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        
-        .contact-info h3 {
-            margin-bottom: 1rem;
-            color: #0288d1;
+        .review-rating {
+            color: #ffd700;
+            margin-top: 5px;
         }
         
         .contact-form {
             background: white;
-            padding: 2rem;
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            margin: 0 auto;
         }
         
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
         
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 8px;
             font-weight: bold;
+            color: #555;
         }
         
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 0.8rem;
+            padding: 12px;
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
         }
         
         .form-group textarea {
-            min-height: 150px;
+            min-height: 120px;
+            resize: vertical;
         }
         
-        /* Подвал */
+        .resources {
+            background-color: #f0f8ff;
+        }
+        
+        .resources-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .resources-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .resources-list a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .resources-list a:hover {
+            color: #6a11cb;
+            text-decoration: underline;
+        }
+        
         footer {
-            background: #0288d1;
+            background: #333;
             color: white;
-            padding: 2rem 0;
+            padding: 40px 0 20px;
             text-align: center;
         }
         
         .footer-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 15px;
+            color: #ffd700;
         }
         
         .social-links a {
+            display: inline-block;
+            margin-right: 15px;
             color: white;
-            margin-left: 1rem;
-            font-size: 1.2rem;
-            text-decoration: none;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
         }
         
-        /* Адаптивность */
+        .social-links a:hover {
+            color: #ffd700;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+        }
+        
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            nav ul li {
-                margin: 0.5rem;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .about-image {
-                order: -1;
-                margin-bottom: 2rem;
-                height: 250px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 1rem;
+            .nav-links {
+                display: none;
             }
             
             .hero h1 {
                 font-size: 2rem;
             }
+            
+            .hero p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Шапка сайта -->
     <header>
-        <div class="container header-content">
-            <div class="logo">Лого<span>Пед</span></div>
+        <div class="container">
             <nav>
-                <ul>
+                <div class="logo">Речь легко</div>
+                <ul class="nav-links">
+                    <li><a href="#about">О логопеде</a></li>
                     <li><a href="#services">Услуги</a></li>
-                    <li><a href="#about">Обо мне</a></li>
-                    <li><a href="#testimonials">Отзывы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#registration">Запись</a></li>
+                    <li><a href="#resources">Ресурсы</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Герой секция -->
     <section class="hero">
         <div class="container">
-            <h1>Коррекция речи для детей и взрослых</h1>
-            <p>Профессиональная помощь в преодолении речевых нарушений. Индивидуальный подход к каждому клиенту с использованием современных методик.</p>
-            <a href="#contact" class="btn">Записаться на консультацию</a>
+            <h1>Профессиональная помощь по коррекции речи</h1>
+            <p>Индивидуальные занятия с опытным логопедом для детей и взрослых. Исправление дикции, лечение заикания, развитие речи.</p>
+            <a href="#registration" class="btn">Записаться на консультацию</a>
         </div>
     </section>
 
-    <!-- Услуги -->
-    <section class="services" id="services">
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">Мои услуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Логопедическое обследование</h3>
-                    <p>Комплексная диагностика речевого развития с составлением индивидуального плана коррекции.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧒</div>
-                    <h3>Коррекция речи у детей</h3>
-                    <p>Исправление нарушений звукопроизношения, развитие фонематического слуха и связной речи.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">👨</div>
-                    <h3>Помощь взрослым</h3>
-                    <p>Коррекция речи после инсультов, травм, работа над дикцией для профессионалов.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- О специалисте -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">Обо мне</h2>
+            <h2 class="section-title">О логопеде</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Я - профессиональный логопед с высшим образованием и более 10-летним опытом работы. Регулярно повышаю квалификацию и изучаю современные методики коррекции речи.</p>
-                    <p>В работе использую индивидуальный подход к каждому клиенту, составляю персональную программу занятий с учетом особенностей и потребностей.</p>
-                    <p>Моя цель - помочь детям и взрослым говорить четко, правильно и уверенно!</p>
+                    <p>Меня зовут Анна Сергеевна Иванова, я - дипломированный логопед с 10-летним опытом работы.</p>
+                    <p>Я специализируюсь на коррекции различных нарушений речи у детей и взрослых. В своей работе использую современные методики и индивидуальный подход к каждому клиенту.</p>
+                    <p>Образование: высшее логопедическое, МГПУ, дополнительная специализация по логопедическому массажу и нейрореабилитации.</p>
+                    <p>Регулярно участвую в профессиональных конференциях и курсах повышения квалификации, чтобы предлагать своим клиентам самые эффективные методы коррекции.</p>
                 </div>
-                <div class="about-image">
-                    <img src="photo_2025-08-25_14-52-38.jpg" alt="Логопед Наталья Евгеньевна - специалист по коррекции речи">
+                <div class="about-image">Фото логопеда</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Диагностика речевых нарушений</h3>
+                    <p>Комплексное обследование речи, выявление причин и составление индивидуального плана коррекции.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Коррекция звукопроизношения</h3>
+                    <p>Исправление дислалии, дизартрии и других нарушений звукопроизношения у детей и взрослых.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Лечение заикания</h3>
+                    <p>Комплексная методика по преодолению заикания, включающая дыхательные и голосовые упражнения.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Развитие речи у детей</h3>
+                    <p>Стимуляция речевого развития, расширение словарного запаса, формирование грамматического строя речи.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Отзывы -->
-    <section class="testimonials" id="testimonials">
+    <section id="reviews">
         <div class="container">
             <h2 class="section-title">Отзывы клиентов</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p class="testimonial-text">"Благодаря занятиям мой сын начал правильно произносить сложные звуки. Специалист нашла подход к ребенку, занятия проходят в игровой форме."</p>
-                    <p class="testimonial-author">- Марина, мама Артема (5 лет)</p>
+            <div class="reviews-container">
+                <div class="review">
+                    <div class="review-header">
+                        <div class="review-avatar">ЕК</div>
+                        <div>
+                            <div class="review-name">Екатерина К.</div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>Обращались с сыном 5 лет, который плохо выговаривал несколько звуков. После 3 месяцев занятий с Анной Сергеевной речь стала чистой и понятной. Специалист нашла подход к ребенку, занятия проходили в игровой форме. Очень довольны результатом!</p>
                 </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">"После инсульта были проблемы с речью. Благодаря систематическим занятиям смог восстановить речь и вернуться к работе. Очень благодарен!"</p>
-                    <p class="testimonial-author">- Сергей Петрович, 56 лет</p>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">"Дочь с удовольствием ходит на занятия. За несколько месяцев удалось исправить проблемы, которые не могли решить годами. Спасибо!"</p>
-                    <p class="testimonial-author">- Анна, мама Софии (6 лет)</p>
+                <div class="review">
+                    <div class="review-header">
+                        <div class="review-avatar">МС</div>
+                        <div>
+                            <div class="review-name">Михаил С.</div>
+                            <div class="review-rating">★★★★★</div>
+                        </div>
+                    </div>
+                    <p>Как взрослый человек с проблемой картавости, долго стеснялся этого и не решался обратиться к специалисту. Анна Сергеевна помогла преодолеть и психологический барьер, и саму речевую проблему. Теперь могу свободно общаться без стеснения!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Контакты -->
-    <section class="contact" id="contact">
+    <section id="registration">
         <div class="container">
-            <h2 class="section-title">Контакты</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Контактная информация</h3>
-                    <p>📞 Телефон: +7 (123) 456-78-90</p>
-                    <p>✉️ Email: logoped@example.com</p>
-                    <p>📍 Адрес: г. Москва, ул. Логопедова, д. 5</p>
-                    <p>🕒 Часы работы: Пн-Пт: 9:00-18:00</p>
-                </div>
-                <div class="contact-form">
-                    <h3>Записаться на консультацию</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Ваше имя</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Сообщение</label>
-                            <textarea id="message"></textarea>
-                        </div>
-                        <button type="submit" class="btn">Отправить</button>
-                    </form>
-                </div>
+            <h2 class="section-title">Запись на консультацию</h2>
+            <div class="contact-form">
+                <form id="registration-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Возраст</label>
+                        <input type="number" id="age" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="problem">Опишите вашу проблему</label>
+                        <textarea id="problem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Отправить заявку</button>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Подвал -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2 class="section-title">Полезные ресурсы</h2>
+            <ul class="resources-list">
+                <li><a href="#">Логопедические упражнения для домашних занятий</a></li>
+                <li><a href="#">Как развивать речь ребенка в разном возрасте</a></li>
+                <li><a href="#">Статьи о речевых нарушениях и методах их коррекции</a></li>
+                <li><a href="#">Рекомендуемая литература по логопедии</a></li>
+                <li><a href="#">Видеоуроки по артикуляционной гимнастике</a></li>
+            </ul>
+        </div>
+    </section>
+
     <footer>
-        <div class="container footer-content">
-            <p>© 2025 Профессиональный логопед. Все права защищены.</p>
-            <div class="social-links">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">VK</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: logoped@example.com</p>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                    <p>Адрес: г. Москва, ул. Логопедическая, д. 5</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Часы работы</h3>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                    <p>Сб: 10:00 - 15:00</p>
+                    <p>Вс: выходной</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Логопед "Речь легко". Все права защищены.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Обработка формы регистрации
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Получаем значения полей формы
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const age = document.getElementById('age').value;
+            const problem = document.getElementById('problem').value;
+            
+            // В реальном приложении здесь был бы код для отправки данных на сервер
+            // Для демонстрации просто покажем сообщение об успехе
+            alert(`Спасибо, ${name}! Ваша заявка принята. Мы свяжемся с вами в ближайшее время по телефону ${phone}.`);
+            
+            // Очищаем форму
+            document.getElementById('registration-form').reset();
+        });
+        
+        // Плавная прокрутка к якорям
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
